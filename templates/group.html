@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}Описание группы{% endblock %}
+
+{% block title %}Группа {{ group.title }}{% endblock %}
+
+{% block body %}
+    Описание группы {{ group.title }}
+    <ul>
+        <li> Название группы - {{ group.title }} </li>
+        <li> Рейтинг группы - {{ group.rating }} место </li>
+    </ul>
+    <a href="{% url 'groups_url'  %}">Главная страница</a>
+{% endblock %}
